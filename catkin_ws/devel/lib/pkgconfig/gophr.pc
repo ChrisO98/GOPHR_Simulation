@@ -1,0 +1,8 @@
+prefix=/home/chris/catkin_ws/devel
+
+Name: gophr
+Description: Description of gophr
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

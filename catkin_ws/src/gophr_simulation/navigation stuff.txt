@@ -1,0 +1,16 @@
+Basic:
+coor_sub_pub.py
+move_base_seq_points.py
+
+
+Intermediate:
+# create and copy csv files for each specified room
+coord_sub_pub.py
+
+User Interface main.py # lanuch the user interface with ROS as a node
+move_base_seq_points.py # launch this node and wait for User Interface
+
+# it would go send a 1 from User Interface to signify room 1 to move_base_seq_points.py
+# then move_base_seq_points.py uses the cooresponding csv file to execute navigation
+
+

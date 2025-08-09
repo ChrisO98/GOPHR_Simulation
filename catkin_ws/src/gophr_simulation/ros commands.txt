@@ -1,0 +1,11 @@
+rosrun tf view_frames && envince frames.pdf
+
+rqt_graph
+
+rosrun tf tf_monitor
+
+rostopic list
+
+rostopic infro /topic
+
+catkin_make

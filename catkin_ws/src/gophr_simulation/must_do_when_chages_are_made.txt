@@ -1,0 +1,19 @@
+do catkin_make in '~/catkin_ws' directory to update the 'gophr' folder when making changes
+then copy the folder to the '~/cartographer_ws/src' directory
+
+
+add an executalbe of cpp file in CMakeLists
+and add a target link for the cpp file also in CMakeLists
+
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+
+KERNEL=="ttyUSB*", MODE="0666"
+ls -l /dev |grep ttyUSB
+sudo chmod 666 /dev/ttyUSB0
+
+
+sudo systemctl unmask NetworkManager
+
+previous command has ran before so don't need to run it again unless it is needed
+
+sudo systemctl start NetworkManager

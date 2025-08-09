@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <!-- Run map server (map)-->
+  <arg name="map_file" default="$(find gophr)/maps/newmap.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" respawn="true"/>
+
+  <!--<node pkg="tf" type="static_transform_publisher" name="map" args="0 0 0 0 0 1 map odom 100"/>-->
+    
+  <!-- Run Gazebo -->
+  <include file="$(find gophr)/gazebo/launch/robot_gazebo.launch"/>
+    
+  <!-- Run rviz -->
+  <include file="$(find gophr)/rviz/launch/robot_rviz.launch"/>
+
+  <!-- Run AMCL when there is an existing map-->
+  <include file="$(find gophr)/nav/launch/amcl.launch"/>
+
+  <!-- Robot Pose EKF is used to combine the odom and map, this requires some sort of localization (odom)-->
+  <!-- The odom comes the simulation from gazebo (name="gazebo_ros_control" filename="libgazebo_ros_control.so")-->
+  <!--  and (<plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">)-->
+  <include file="$(find gophr)/nav/launch/robot_pose_ekf.launch"/>
+    
+  <!-- Run move_base node -->
+  <include file="$(find gophr)/nav/launch/move_base.launch"/>
+  
+  <!--<node name="node_select" pkg="gophr" type="nodeSelection_1.py" />
+  <node name="waypoint_create" pkg="gophr" type="waypointCreation_2.py" />
+  <node name="navigate_to_goal" pkg="gophr" type="navigateToGoals_3.py" /> --> <!-- publishes to topic /move_base/goal -->
+    
+  <!-- simple navigation move forward-->
+  <!--<node name="simple_navigation_goalss" pkg="gophr" type="simple_navigation_goalss.py" />-->
+   
+    
+</launch>

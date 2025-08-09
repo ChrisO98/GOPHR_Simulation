@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+  <node name="move_base_seq_points" pkg="gophr" type="move_base_seq_points.py">
+    <!-- Load Sequence of Points (Cartesian Coordinates wrt "map" RF, in meters) -->
+    <!--<rosparam param="p_seq">[8,1,0,7.93,18.3,0,1.06,20,0]</rosparam>--> <!-- sets of x,y,z coordinates -->
+    <!-- Load Sequence of Desired Yaw Angles (no rotations around x and y axes) in degrees-->
+    <!--<rosparam param="yea_seq">[90,0,180]</rosparam>-->
+  </node>
+
+</launch>

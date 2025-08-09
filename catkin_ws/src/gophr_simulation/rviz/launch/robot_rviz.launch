@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+
+    
+    <!-- these are the arguments you can pass this launch file -->
+    <!--<arg name="gui" default="true"/>-->
+
+    <!-- Load the URDF into the ROS Parameter Server --> <!-- stays on -->
+    <!--<param name="robot_description" command="$(find xacro)/xacro '$(find gophr)/urdf/gophr_robot.xacro'" />
+    
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="use_gui" value="False"/>
+    </node>
+    
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />-->
+    
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find gophr)/rviz/config/gophr_rviz.rviz"/>
+
+    <!-- name and type must be the same for cpp to complie and execute, they will match with the same name that the CMakeLists.txt has for add_executable(gophr_move_node src/move_robot.cpp ${GOPHR_SRC}) and target_link_libraries(gophr_move_node ${catkin_LIBRARIES}) -->
+    
+</launch>
