@@ -18,7 +18,7 @@ gophr (Ground Operating Patient Helper Robot) - Simulation folder using gazebo a
 
 gophr_hardware - Used on the actual robot
 
-opencv - Text detection using opencv and pytesseract (handeld by teammate)<br>
+opencv - Text detection using opencv and pytesseract (handled by teammate)<br>
 Download and place the 'froze_east_text_detection.pb' file into gophr_hardware/scripts https://github.com/oyyd/frozen_east_text_detection.pb
 
 robot_pose_ekf - ROS package for publishing odometry to base_footprint of the robot to fully connect map->odom->base_footprint->base_link
