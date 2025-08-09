@@ -1,5 +1,5 @@
 # GOPHR_Simulation
-Contains the GOPHR simulation for the Texas A&M CAPSTONE project in one folder (catkin_ws)
+Contains the GOPHR simulation for the Texas A&M Capstone senior project in one folder (catkin_ws)
 
 Uses Gazebo Simulator and CAD files with reduced polygons to simulate the base of GOPHR for figuring out Lidar and Mapping
 
@@ -14,8 +14,7 @@ gophr (Ground Operating Patient Helper Robot) - Simulation folder using gazebo a
 
 gophr_hardware - Used on the actual robot
 
-opencv - Text detection using opencv and pytesseract (handled by teammate)<br>
-Download and place the 'froze_east_text_detection.pb' file into gophr_hardware/scripts https://github.com/oyyd/frozen_east_text_detection.pb
+opencv - Text detection using opencv and pytesseract (handled by teammate)
 
 robot_pose_ekf - ROS package for publishing odometry to base_footprint of the robot to fully connect map->odom->base_footprint->base_link
 
