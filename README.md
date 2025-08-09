@@ -20,5 +20,3 @@ Download and place the 'froze_east_text_detection.pb' file into gophr_hardware/s
 robot_pose_ekf - ROS package for publishing odometry to base_footprint of the robot to fully connect map->odom->base_footprint->base_link
 
 rplidar_ros - ROS package for RPLidar A1M8
-
-Make sure to enable UART2 and SPI on the Raspberry Pi 4 with Ubuntu
