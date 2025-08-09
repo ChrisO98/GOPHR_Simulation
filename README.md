@@ -1,5 +1,5 @@
 # GOPHR_Simulation
-Contains the GOPHR simulation for the Texas A&M Capstone senior project in one folder (catkin_ws)
+Contains the GOPHR simulation for the Texas A&M senior capstone project in one folder (catkin_ws)
 
 Uses Gazebo Simulator and CAD files with reduced polygons to simulate the base of GOPHR for figuring out Lidar and Mapping
 
